@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig =  {
+  rewrites: () => [
+    {
+      source: "/usuarios",
+      destination: "/users",
+    }
+  ]
 };
 
 export default nextConfig;
