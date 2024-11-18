@@ -4,17 +4,18 @@ import Image from "next/image"
 import deletar from "@/app/assets/delete.png"
 
 interface linha {
-    colunaUm : string, 
-    colunaDois : string
+    EDV : string, 
+    RFID : string,
+    name : string
 }
 
-interface dadosTable {
+interface dadoLinhasTable {
     tituloUm: string,
     tituloDois: string
-    dado: linha[]
+    dadoLinha: {EDV : string,  RFID : string, name : string}[] | undefined
 }
 
-const Tabela: React.FC<dadosTable> = ({tituloUm, tituloDois,  dado}) => {{
+const Tabela: React.FC<dadoLinhasTable> = ({tituloUm, tituloDois,  dadoLinha}) => {{
     return (
         <> 
          <table>
@@ -23,11 +24,14 @@ const Tabela: React.FC<dadosTable> = ({tituloUm, tituloDois,  dado}) => {{
                 <th>{tituloDois}</th>
                 <th>Deletar</th>
             </tr>
-            <tr>
-                <td>{dado[0].colunaUm}</td>
-                <td>{dado[1].colunaDois}</td>
-                <td><Image src={deletar} alt=""></Image></td>
-            </tr>
+                {dadoLinha?.map((item, index) => 
+                <tr>
+                    <td>{item.EDV}</td>
+                    <td>{item.RFID}</td>
+                    <td>{item.name}</td>
+                    <td><Image src={deletar} alt=""></Image></td>
+                </tr>
+                )}
         </table>
         </>
 
