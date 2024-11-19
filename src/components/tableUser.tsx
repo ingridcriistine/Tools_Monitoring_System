@@ -4,13 +4,14 @@ import Image from "next/image"
 import deletar from "@/app/assets/delete.png"
 
 interface dadoLinhasTable {
-    tituloUm: string,
+    tituloUm: string ,
     tituloDois: string
     tituloTres: string
     dadoLinha: {EDV : string,  RFID : string, name : string}[] 
+    
 }
 
-const Tabela: React.FC<dadoLinhasTable> = ({tituloUm, tituloDois, tituloTres, dadoLinha}) => {{
+const TabelaUser: React.FC<dadoLinhasTable> = ({tituloUm, tituloDois, tituloTres, dadoLinha}) => {{
     console.log(dadoLinha)
     return (
         <> 
@@ -36,8 +37,7 @@ const Tabela: React.FC<dadoLinhasTable> = ({tituloUm, tituloDois, tituloTres, da
             </tbody>
         </table>
         </>
-
     );
 }}
 
-export default Tabela;
+export default TabelaUser;

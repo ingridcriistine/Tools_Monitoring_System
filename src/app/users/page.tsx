@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { getData } from "@/firebaseService";// Importa a função de serviço
-import Tabela from "@/components/table";
+import Tabela from "@/components/tableUser";
 import Image from "next/image";
 import imgLupa from "@/app/assets/lupa.png"
 
@@ -14,7 +14,6 @@ interface employers {
 
 const User: React.FC = () => {
   const [dado, setDado] = useState<employers[]>();
-  const [dadosCarregados, setCarregado] = useState<Boolean>();
 
   useEffect(() => {
     async function fetchData() {
@@ -22,7 +21,6 @@ const User: React.FC = () => {
         const data = await getData("/employers");
         console.log(data)
         setDado(data);
-        setCarregado(true);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
