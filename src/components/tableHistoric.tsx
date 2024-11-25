@@ -9,7 +9,7 @@ interface dadoLinhasTable {
 }
 
 const TabelaHistorico: React.FC<dadoLinhasTable> = ({tituloUm, tituloDois, tituloTres, tituloQuatro, tituloCinco, dadoLinha}) => {{
-    console.log(dadoLinha);
+    console.log(dadoLinha);    
     return (
         <> 
          <table className="flex w-full flex-col">
@@ -29,7 +29,8 @@ const TabelaHistorico: React.FC<dadoLinhasTable> = ({tituloUm, tituloDois, titul
                         <td className="justify-center flex w-[25%] border-b-2 p-2">{item.RFID}</td>
                         <td className="justify-center flex w-[25%] border-b-2 p-2">{item.loan}</td>
                         <td className="justify-center flex w-[25%] border-b-2 p-2">{item.return}</td>
-                        <td className="justify-center flex w-[25%] border-b-2 p-2">{item.datetime}</td>
+                        {` var teste = {item.datetime}.substring(0,9)`}
+                        <td className="justify-center flex w-[25%] border-b-2 p-2">{teste}</td>
                     </tr>
                 )   
                 )}
