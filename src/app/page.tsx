@@ -1,6 +1,6 @@
 import { CardTool } from "@/components/cardTool";
 import Image from "next/image";
-import imgTools from "@/app/assets/bosch.png";
+import imgTools from "@/app/assets/tools.png";
 
 export default function Home() {
   return (
