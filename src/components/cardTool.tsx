@@ -15,7 +15,7 @@ interface CardProps {
 
 export const CardTool: React.FC<CardProps> = ({imagem, title, status}) => {
     return(
-        <div className="flex flex-col relative ml-12 w-56 h-[290px] m-4 bg-white rounded-3xl align-center shadow-md shadow-slate-400 hover:scale-110 transition easy-in-out text-black shadow-lg shadow-indigo-500/40">
+        <div className="flex flex-col relative w-56 h-[290px] m-4 bg-white rounded-3xl align-center shadow-md shadow-slate-400 hover:scale-110 transition easy-in-out text-black shadow-lg shadow-indigo-500/40">
             <Image src={imagem === 1 ? img1 : imagem === 2 ? img2 : imagem === 3 ? img3 : img4} alt="imagem" className="h-[80%] object-fit rounded-t-3xl"/>
             <div className="flex align-center justify-around">
                 <h3 className="m-4">{title}</h3>
