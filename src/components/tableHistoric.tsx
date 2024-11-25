@@ -4,10 +4,11 @@ interface dadoLinhasTable {
     tituloDois: string,
     tituloTres: string,
     tituloQuatro: string,
-    dadoLinha : {[key: string] : {name: string , RFID: string, datetime: string, loan: string }}[]
+    tituloCinco: string,
+    dadoLinha : {[key: string] : {name: string , RFID: string, datetime: string, loan: string, return: string }}[]
 }
 
-const TabelaHistorico: React.FC<dadoLinhasTable> = ({tituloUm, tituloDois, tituloTres, tituloQuatro, dadoLinha}) => {{
+const TabelaHistorico: React.FC<dadoLinhasTable> = ({tituloUm, tituloDois, tituloTres, tituloQuatro, tituloCinco, dadoLinha}) => {{
     console.log(dadoLinha);
     return (
         <> 
@@ -18,15 +19,17 @@ const TabelaHistorico: React.FC<dadoLinhasTable> = ({tituloUm, tituloDois, titul
                     <th className="justify-center flex w-[25%] p-5">{tituloDois}</th>
                     <th className="justify-center flex w-[25%] p-5">{tituloTres}</th>
                     <th className="justify-center flex w-[25%] p-5">{tituloQuatro}</th>
+                    <th className="justify-center flex w-[25%] p-5">{tituloCinco}</th>
                 </tr>
             </thead>
             <tbody className="w-full items-center">
-                {dadoLinha?.fo((item, index) => (
+                {Object.values(dadoLinha).map((item,index) => (
                     <tr key={index} className="flex w-full items-center	">
-                        <td className="justify-center flex w-[25%] border-b-2 p-2">{item.dadoLinha.name}</td>
-                        <td className="justify-center flex w-[25%] border-b-2 p-2">{item.dadoLinha.RFID}</td>
-                        <td className="justify-center flex w-[25%] border-b-2 p-2">{item.dadoLinha.loan}</td>
-                        <td className="justify-center flex w-[25%] border-b-2 p-2">{item.dadoLinha.datetime}</td>
+                        <td className="justify-center flex w-[25%] border-b-2 p-2">{item.name}</td>
+                        <td className="justify-center flex w-[25%] border-b-2 p-2">{item.RFID}</td>
+                        <td className="justify-center flex w-[25%] border-b-2 p-2">{item.loan}</td>
+                        <td className="justify-center flex w-[25%] border-b-2 p-2">{item.return}</td>
+                        <td className="justify-center flex w-[25%] border-b-2 p-2">{item.datetime}</td>
                     </tr>
                 )   
                 )}

@@ -10,7 +10,8 @@ interface loan {
         name: string,
         RFID: string,
         datetime: string, 
-        loan: string
+        loan: string,
+        return: string
     }  
 }
 const Historic: React.FC = () => {
@@ -42,7 +43,7 @@ const Historic: React.FC = () => {
         </div>
       </div>
       <div className="mt-12">
-        {dado && <Tabela tituloUm={"Nome funcionário"} tituloDois={"RFID"} tituloTres="Ferramenta"  tituloQuatro="Data hora" dadoLinha={dado}/>}
+        {dado && <Tabela tituloUm={"Nome funcionário"} tituloDois={"RFID"} tituloTres="Emprestimo"  tituloQuatro="Devolução" tituloCinco="Data-hora"  dadoLinha={dado}/>}
       </div>
     </div>
   );
