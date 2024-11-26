@@ -25,20 +25,11 @@ const TabelaHistorico: React.FC<dadoLinhasTable> = ({tituloUm, tituloDois, titul
             <tbody className="w-full items-center">
                 {Object.values(dadoLinha).map((item, index) => (
                     <tr key={index} className="flex w-full items-center	">
-<<<<<<< HEAD
                         <td className="justify-center flex w-[20%] border-b-2 p-2">{item.name}</td>
                         <td className="justify-center flex w-[20%] border-b-2 p-2">{item.RFID}</td>
                         <td className="justify-center flex w-[20%] border-b-2 p-2">{item.loan}</td>
                         <td className="justify-center flex w-[20%] border-b-2 p-2">{item.return}</td>
                         <td className="justify-center flex w-[30%] border-b-2 p-2">{item.datetime}</td>
-=======
-                        <td className="justify-center flex w-[25%] border-b-2 p-2">{item.name}</td>
-                        <td className="justify-center flex w-[25%] border-b-2 p-2">{item.RFID}</td>
-                        <td className="justify-center flex w-[25%] border-b-2 p-2">{item.loan}</td>
-                        <td className="justify-center flex w-[25%] border-b-2 p-2">{item.return}</td>
-                        {` var teste = {item.datetime}.substring(0,9)`}
-                        <td className="justify-center flex w-[25%] border-b-2 p-2">{teste}</td>
->>>>>>> 10fdb8b8fd553a49f925ee05be49e14a00b4aa64
                     </tr>
                 )   
                 )}
