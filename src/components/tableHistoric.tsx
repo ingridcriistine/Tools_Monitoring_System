@@ -29,7 +29,7 @@ const TabelaHistorico: React.FC<dadoLinhasTable> = ({tituloUm, tituloDois, titul
                         <td className="justify-center flex w-[20%] border-b-2 p-2">{item.RFID}</td>
                         <td className="justify-center flex w-[20%] border-b-2 p-2">{item.loan}</td>
                         <td className="justify-center flex w-[20%] border-b-2 p-2">{item.return}</td>
-                        <td className="justify-center flex w-[30%] border-b-2 p-2">{item.datetime}</td>
+                        <td className="justify-center flex w-[30%] border-b-2 p-2">{item.datetime.substring(0,16)}h</td>
                     </tr>
                 )   
                 )}
