@@ -26,9 +26,13 @@ const Historic: React.FC = () => {
         console.error("Error fetching data:", error);
       }
     }
-    fetchData();
-  }, []);
+    const id = setInterval(() => {
+      fetchData()
+      console.log("teste");
+    }, 3000);
 
+    return () => clearInterval(id);
+  }, []);
 
   return (
     <div className="bg-white text-black flex flex-col min-h-screen p-8 ml-[250px] pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
