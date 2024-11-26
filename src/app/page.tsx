@@ -36,10 +36,15 @@ export default function Home() {
           <Image src={imgTools} alt=""  className="flex w-full h-full object-cover object-top  bg-white rounded-3xl align-center shadow-md shadow-slate-400"/>
         </div>
         <div className="flex flex-row flex-wrap">
-          <CardTool imagem={4} title={"Chave de fenda"} status={(dado[2].qta == 0 || undefined) ? false : true}/>
-          <CardTool imagem={2} title={"Alicate"} status={(dado[1].qta == 0 || undefined) ? false : true}/>
-          <CardTool imagem={1} title={"Martelo"} status={(dado[0].qta == 0 || undefined) ? false : true}/>
-          <CardTool imagem={3} title={"Chave de boca"} status={(dado[3].qta == 0 || undefined) ? false : true}/>
+          {dado&&
+          <>
+            <CardTool imagem={4} title={"Chave de fenda"} status={(dado[2].qta == 0) ? false : true}/>
+            <CardTool imagem={2} title={"Alicate"} status={(dado[1].qta == 0) ? false : true}/>
+            <CardTool imagem={1} title={"Martelo"} status={(dado[0].qta == 0) ? false : true}/>
+            <CardTool imagem={3} title={"Chave de boca"} status={(dado[3].qta == 0) ? false : true}/>  
+          </>
+          }
+          
         </div>
       </main>
     </div>
