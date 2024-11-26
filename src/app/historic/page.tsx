@@ -38,7 +38,7 @@ const Historic: React.FC = () => {
     <div className="bg-white text-black flex flex-col min-h-screen p-8 ml-[250px] pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <div>
         <div className="flex flex-row justify-between mt-16 pb-4">
-          <h3 className="text-[22px] font-bold">Histórico de emprésimos</h3>
+          <h3 className="text-[22px] font-bold">Histórico de empréstimos</h3>
         </div>
         <hr />
         <div className="flex flex-row mt-8 w-full justify-end">

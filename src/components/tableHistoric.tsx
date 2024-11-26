@@ -17,18 +17,18 @@ const TabelaHistorico: React.FC<dadoLinhasTable> = ({tituloUm, tituloDois, titul
                 <tr className="flex w-full items-center">
                     <th className="justify-center flex w-[20%] p-5">{tituloUm}</th>
                     <th className="justify-center flex w-[20%] p-5">{tituloDois}</th>
-                    <th className="justify-center flex w-[20%] p-5">{tituloTres}</th>
-                    <th className="justify-center flex w-[20%] p-5">{tituloQuatro}</th>
+                    <th className="justify-center flex w-[30%] p-5">{tituloTres}</th>
+                    <th className="justify-center flex w-[30%] p-5">{tituloQuatro}</th>
                     <th className="justify-center flex w-[30%] p-5">{tituloCinco}</th>
                 </tr>
             </thead>
             <tbody className="w-full items-center">
                 {Object.values(dadoLinha).map((item, index) => (
-                    <tr key={index} className="flex w-full items-center	h-12">
+                    <tr key={index} className="flex w-full items-center	h-14">
                         <td className="justify-center flex w-[20%] h-full border-b-2 p-2">{item.name}</td>
                         <td className="justify-center flex w-[20%] h-full border-b-2 p-2">{item.RFID}</td>
-                        <td className="justify-center flex w-[20%] h-full border-b-2 p-2">{item.loan}</td>
-                        <td className="justify-center flex w-[20%] h-full border-b-2 p-2">{item.return}</td>
+                        <td className="justify-center flex w-[30%] h-full border-b-2 p-2">{item.loan}</td>
+                        <td className="justify-center flex w-[30%] h-full border-b-2 p-2">{item.return}</td>
                         <td className="justify-center flex w-[30%] h-full border-b-2 p-2">{item.datetime.substring(0,16)}h</td>
                     </tr>
                 )   
